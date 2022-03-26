@@ -1,0 +1,500 @@
+.Capsule {
+    overflow: hidden;
+    .Capsule_content {
+        width: calc(100% - ((100% - 20%) / 5));
+        margin-left: auto;
+        .Inner_capsule {
+            padding-right: 50px;
+            h1 {
+                font-weight: bold;
+                margin: 0;
+            }
+            p {
+                margin: 45px 0 50px;
+                font-size: 18px;
+            }
+            img {
+                height: 180px;
+            }
+        }
+    }
+    .Capsule_img {
+        img {
+            width: 100%;
+        }
+    }
+    &.Capsule_Reverse {
+        .Capsule_content {
+            margin-right: auto;
+            margin-left: unset;
+            padding-left: 10%;
+            .Inner_capsule {
+                padding-right: 0px;
+            }
+        }
+    }
+}
+
+.Three_Box {
+    position: relative;
+    // overflow: hidden;
+    img.three_bg {
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        opacity: 0.5;
+        width: 70%;
+        object-fit: contain;
+        object-position: top left;
+    }
+    .Three_box_list {
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            li {
+                display: flex;
+                align-items: flex-start;
+                font-size: 20px;
+                line-height: 25px;
+                color: $theme-secondary;
+                margin-bottom: 30px;
+                i {
+                    color: $theme-primary;
+                    font-size: 10px;
+                    margin: 5px 10px 0 0;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        ul.Margin {
+            li {
+                margin-bottom: 40px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .Three_Box_img {
+        text-align: center;
+        img {
+            width: 80%;
+        }
+    }
+}
+
+.Quote_Section {
+    .Quote_heading {
+        h2 {
+            color: $theme-black;
+            margin: 0 0 15px;
+            font-size: 60px;
+            span {
+                color: $theme-primary;
+            }
+        }
+        p {
+            margin: 0 0 50px;
+            font-size: 18px;
+        }
+        a {
+            text-decoration: none;
+            background: $theme-primary;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: $theme-black;
+            display: inline-block;
+            padding: 15px 50px;
+            font-size: 20px;
+            transition: .5s;
+            border: 2px solid $theme-primary;
+            &:hover {
+                background: transparent;
+            }
+        }
+    }
+}
+
+.Office_Section {
+    position: relative;
+    // overflow: hidden;
+    img.office_bg-img {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    .Office_Img {
+        img {
+            width: 100%;
+            padding: 2px;
+        }
+    }
+    .Office_Content {
+        padding: 0 60px;
+        h2 {
+            color: $theme-secondary;
+            font-size: 60px;
+            margin-bottom: 30px;
+            span {
+                color: $theme-primary;
+            }
+        }
+        p {
+            margin: 0;
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+    .row {
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+.Why_US {
+    img.why_us_bg {
+        display: none;
+    }
+    .heading {
+        h2 {
+            font-size: 60px;
+            color: $theme-black;
+            margin-bottom: 80px;
+        }
+    }
+    .why_us_box {
+        img {
+            height: 180px;
+        }
+        h3 {
+            font-size: 40px;
+            margin: 20px 0 20px;
+        }
+        p {
+            text-align: justify;
+            text-align-last: center;
+            font-size: 18px;
+            margin: 0;
+        }
+    }
+    .row {
+        .col-lg-4 {
+            padding: 0 40px;
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+@media (max-width:1500px) {
+    .Capsule {
+        .Capsule_content {
+            .Inner_capsule {
+                p {
+                    font-size: 16px;
+                    margin: 30px 0 50px;
+                }
+                img {
+                    height: 150px;
+                }
+            }
+        }
+    }
+    .Three_Box {
+        .Three_box_list {
+            ul {
+                li {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .Why_US {
+        .why_us_box {
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+    .Office_Section {
+        .Office_Content {
+            p {
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .Capsule {
+        .Capsule_content {
+            .Inner_capsule {
+                p {
+                    margin: 20px 0 30px;
+                }
+                img {
+                    height: 100px;
+                }
+            }
+        }
+    }
+    .Three_Box {
+        .Three_box_list {
+            ul {
+                li {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+            ul.Margin {
+                li {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+    .Quote_Section {
+        .Quote_heading {
+            h2 {
+                font-size: 50px;
+            }
+        }
+    }
+    .Office_Section {
+        .Office_Content {
+            padding: 0 40px;
+            h2 {
+                font-size: 50px;
+                margin-bottom: 10px;
+            }
+            p {
+                font-size: 16px;
+                line-height: 25px;
+            }
+        }
+    }
+    .Why_US {
+        .why_us_box {
+            img {
+                height: 120px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width:1150px) {
+    .Capsule {
+        .Capsule_content {
+            width: calc(100% - ((100% - 5%) / 10));
+            .Inner_capsule {
+                p {
+                    font-size: 14px;
+                }
+                img {
+                    height: 90px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:991px) {
+    .Capsule {
+        .Capsule_img {
+            img {
+                height: 450px;
+                object-fit: cover;
+            }
+        }
+    }
+    .Office_Section {
+        .Office_Content {
+            padding: 0 20px;
+            h2 {
+                font-size: 35px;
+            }
+            p {
+                font-size: 14px;
+                line-height: 19px;
+            }
+        }
+    }
+    .Why_US {
+        .why_us_box {
+            margin-bottom: 50px;
+        }
+        .row {
+            .col-md-12 {
+                padding: 0 15px !important;
+                &:last-child {
+                    .why_us_box {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .Capsule {
+        width: 100%;
+        margin: 0 auto;
+        padding-right: 15px;
+        padding-left: 15px;
+        max-width: 95%;
+        .row {
+            flex-wrap: wrap-reverse;
+        }
+        &.Capsule_Reverse {
+            margin-top: 50px;
+            .row {
+                flex-wrap: wrap;
+            }
+            .Capsule_content {
+                padding-left: 0;
+            }
+        }
+        .Capsule_content {
+            width: 100%;
+            position: relative;
+            padding-top: 30px;
+            .Inner_capsule {
+                padding-right: 0px;
+                h1 {
+                    font-size: 28px;
+                }
+                p {
+                    margin: 30px 0 0;
+                    text-align: justify;
+                    text-align-last: center;
+                }
+                img {
+                    height: 150px;
+                    position: absolute;
+                    top: -80px;
+                    right: 20px;
+                    z-index: 999999;
+                    background: #fff;
+                    padding: 15px;
+                    box-shadow: 0 0 7px 0px #b8b8b8;
+                }
+            }
+        }
+        .Capsule_img {
+            z-index: -1;
+            position: relative;
+            img {
+                height: auto;
+            }
+        }
+    }
+    .Three_Box {
+        img.three_bg {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+        .Three_box_list {
+            ul {
+                li {
+                    font-size: 14px;
+                    margin-bottom: 15px;
+                    i {
+                        font-size: 8px;
+                        margin: 5px 5px 0 0;
+                    }
+                }
+            }
+            ul.Margin {
+                li {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .Three_Box_img {
+            margin: 40px 0;
+        }
+    }
+    .Quote_Section {
+        .Quote_heading {
+            h2 {
+                font-size: 35px;
+                margin: 0 0 10px;
+            }
+            p {
+                margin: 0 0 30px;
+                font-size: 14px;
+            }
+            a {
+                padding: 8px 30px;
+                font-size: 16px;
+            }
+        }
+    }
+    .Office_Section {
+        position: relative;
+        background: url(img/office-bg.webp);
+        background-size: 100% 70%;
+        background-repeat: no-repeat;
+        background-position: center;
+        .office_bg-img {
+            display: none;
+        }
+        .Office_Content {
+            padding: 20px 0px 60px;
+            text-align: center;
+            p {
+                font-size: 14px;
+                line-height: 19px;
+                text-align: justify;
+                text-align-last: center;
+            }
+        }
+        .row {
+            &:last-child {
+                .Office_Content {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+    .Why_US {
+        position: relative;
+        img.why_us_bg {
+            position: absolute;
+            bottom: 0;
+            width: 30%;
+            height: auto;
+            display: block;
+        }
+        .heading {
+            h2 {
+                font-size: 35px;
+                margin-bottom: 50px;
+            }
+        }
+        .row {
+            .col-md-12 {
+                &:last-child {
+                    .why_us_box {
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
